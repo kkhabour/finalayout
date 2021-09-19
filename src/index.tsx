@@ -2,8 +2,8 @@ import React from 'react'
 import FinaSidebar from './components/FinaSidebar'
 import FinaContent from './components/FinaContent'
 import styled from 'styled-components'
-import { useMediaQuery } from './components/FinaSidebar/hooks/hooks'
-import { MAIN_BACKGROUND } from './utils/colors'
+import { useMediaQuery } from './hooks/hooks'
+import { GREY } from './utils/colors'
 
 const Layout = styled.main`
   width: 100vw;
@@ -12,7 +12,7 @@ const Layout = styled.main`
   margin: 0;
   box-sizing: border-box;
   display: flex;
-  background-color: ${MAIN_BACKGROUND};
+  background-color: ${GREY};
 `
 
 const FinaLayout: React.FC = () => {

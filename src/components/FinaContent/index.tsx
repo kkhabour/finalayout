@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { MAIN_BACKGROUND } from '../../utils/colors'
+import { GREY } from '../../utils/colors'
 
 interface IFinaContentProps {
   collapse: boolean
@@ -11,7 +11,7 @@ interface IFinaContentProps {
 const Content = styled.section`
   flex-grow: 1;
   overflow-y: scroll;
-  background-color: ${MAIN_BACKGROUND};
+  background-color: ${GREY};
   &::-webkit-scrollbar {
     display: none;
   }
@@ -46,7 +46,7 @@ const FinaContent: React.FunctionComponent<IFinaContentProps> = ({
           <button onClick={() => setCollapse(!collapse)}>collapse</button>
         ) : null}
       </Header>
-      <Empty>Sorry, Site not availabe...</Empty>
+      <Empty>FINALAYOUT...</Empty>
     </Content>
   )
 }
