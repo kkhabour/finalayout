@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { SIDEBAR, SIDEBAR_COLLAPSED } from 'utils/sizes'
 import { WHITE } from 'utils/colors'
 
+import Logo from 'assets/logo.svg'
+
 interface IFinaSidebarProps {
   collapse: boolean
   setCollapse: (collpase: boolean) => void
@@ -32,6 +34,22 @@ const Collapse = styled.button`
   right: 0;
 `
 
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+`
+
+const LogoWrapper = styled.div`
+  border: solid black 1px;
+  height: 152px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
+`
+
 const FinaSidebar: React.FunctionComponent<IFinaSidebarProps> = ({
   collapse,
   setCollapse,
@@ -46,6 +64,12 @@ const FinaSidebar: React.FunctionComponent<IFinaSidebarProps> = ({
       {!isMobile ? (
         <Collapse onClick={handleCollapse}>collapse</Collapse>
       ) : null}
+
+      <Content>
+        <LogoWrapper>
+          <Logo />
+        </LogoWrapper>
+      </Content>
     </SideBar>
   )
 }
